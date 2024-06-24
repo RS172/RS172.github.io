@@ -6,36 +6,52 @@
     <title>Ideal Clicker Game</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+            color: #fff;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         #game-container {
-            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         #clicker {
-            width: 100px;
-            height: 100px;
-            background-color: #4CAF50;
+            width: 120px;
+            height: 120px;
+            background: #4CAF50;
             color: white;
             font-size: 24px;
             border: none;
             border-radius: 50%;
             cursor: pointer;
+            transition: transform 0.1s;
+        }
+        #clicker:active {
+            transform: scale(0.95);
         }
         #upgrades {
             margin-top: 20px;
         }
         .upgrade {
-            margin: 10px;
-            padding: 10px;
+            margin: 10px 0;
+            padding: 15px 20px;
             background-color: #2196F3;
             color: white;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
-            display: block;
+            transition: background 0.3s;
+        }
+        .upgrade:hover {
+            background-color: #1976D2;
         }
     </style>
 </head>
