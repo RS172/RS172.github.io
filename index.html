@@ -68,19 +68,28 @@
     </div>
 
     <script>
-        let points = 0;
-        let pointsPerClick = 1;
+        let points = parseInt(localStorage.getItem('points')) || 0;
+        let pointsPerClick = parseInt(localStorage.getItem('pointsPerClick')) || 1;
+        let upgrade1Count = parseInt(localStorage.getItem('upgrade1Count')) || 0;
+        let upgrade2Count = parseInt(localStorage.getItem('upgrade2Count')) || 0;
+
+        document.getElementById('points').textContent = points;
 
         document.getElementById('clicker').addEventListener('click', function() {
             points += pointsPerClick;
             document.getElementById('points').textContent = points;
+            localStorage.setItem('points', points);
         });
 
         document.getElementById('upgrade1').addEventListener('click', function() {
             if (points >= 10) {
                 points -= 10;
                 pointsPerClick += 1;
+                upgrade1Count += 1;
                 document.getElementById('points').textContent = points;
+                localStorage.setItem('points', points);
+                localStorage.setItem('pointsPerClick', pointsPerClick);
+                localStorage.setItem('upgrade1Count', upgrade1Count);
             } else {
                 alert('Not enough points for Upgrade 1!');
             }
@@ -90,7 +99,11 @@
             if (points >= 50) {
                 points -= 50;
                 pointsPerClick += 2;
+                upgrade2Count += 1;
                 document.getElementById('points').textContent = points;
+                localStorage.setItem('points', points);
+                localStorage.setItem('pointsPerClick', pointsPerClick);
+                localStorage.setItem('upgrade2Count', upgrade2Count);
             } else {
                 alert('Not enough points for Upgrade 2!');
             }
