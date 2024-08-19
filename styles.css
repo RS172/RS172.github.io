@@ -1,0 +1,106 @@
+/* Reset básico para margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #3498db; /* Cor de fundo azul */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Usa 100% da altura da viewport */
+    color: #ffffff; /* Cor do texto branca */
+    text-align: center; /* Centraliza o texto dentro do container */
+    overflow: hidden; /* Garante que não haja barras de rolagem */
+    padding: 0; /* Remove preenchimento */
+}
+
+/* Estilo do container */
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%;
+    height: 100%;
+    max-width: 95%; /* Limita a largura máxima para 95% da tela */
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2rem; /* Tamanho do texto ajustado com uma unidade fixa para melhor controle */
+    font-weight: bold; /* Negrito */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    white-space: nowrap; /* Impede quebra de linha no texto */
+    overflow: hidden; /* Garante que o texto não ultrapasse os limites */
+    text-overflow: ellipsis; /* Adiciona reticências se o texto for longo demais */
+}
+
+/* Estilo do contêiner de botões */
+.button-container {
+    display: flex;
+    flex-direction: row; /* Alinha botões horizontalmente */
+    gap: 10px; /* Espaçamento entre os botões */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+/* Estilo dos botões */
+.button {
+    background-color: #ffffff; /* Cor de fundo dos botões */
+    color: #3498db; /* Cor do texto dos botões */
+    border: none; /* Remove a borda padrão dos botões */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 12px 24px; /* Espaçamento interno dos botões */
+    font-size: 1rem; /* Tamanho da fonte dos botões */
+    cursor: pointer; /* Muda o cursor para indicar um botão clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições suaves para a cor de fundo e o efeito de clique */
+    white-space: nowrap; /* Impede quebra de linha no texto do botão */
+    display: flex; /* Usa flexbox para centralizar o conteúdo do botão */
+    align-items: center; /* Alinha verticalmente o texto no centro */
+    justify-content: center; /* Alinha horizontalmente o texto no centro */
+    text-align: center; /* Garante o alinhamento central do texto */
+    min-width: 100px; /* Define uma largura mínima para os botões */
+}
+
+/* Estilo dos botões ao passar o mouse */
+.button:hover {
+    background-color: #3498db; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo dos botões ao clicar */
+.button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+/* Media Queries para tamanhos de tela específicos */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem; /* Ajusta o tamanho da fonte do título para telas menores */
+    }
+
+    .button {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte dos botões para telas menores */
+        padding: 10px 20px; /* Ajusta o espaçamento interno dos botões */
+        min-width: 80px; /* Ajusta a largura mínima dos botões para telas menores */
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 2.5rem; /* Ajusta o tamanho da fonte do título para telas grandes */
+    }
+
+    .button {
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte dos botões para telas grandes */
+        padding: 15px 30px; /* Ajusta o espaçamento interno dos botões */
+        min-width: 120px; /* Define uma largura mínima para os botões em telas grandes */
+    }
+}
