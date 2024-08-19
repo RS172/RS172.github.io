@@ -1,3 +1,17 @@
+/* 
+Paleta de Cores
+
+#1E201E
+#3C3D37
+#697565
+#ECDFCC
+
+https://colorhunt.co/palette/1e201e3c3d37697565ecdfcc
+
+*/
+
+
+
 /* Reset básico para margens e preenchimentos */
 * {
     margin: 0;
@@ -8,12 +22,12 @@
 /* Estilo do corpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #3498db; /* Cor de fundo azul */
+    background-color:  #1E201E;/* #3498db;  Cor de fundo azul */
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
     height: 100vh; /* Usa 100% da altura da viewport */
-    color: #ffffff; /* Cor do texto branca */
+    color: #ece6e3;/* #ffffff;  Cor do texto branca */
     text-align: center; /* Centraliza o texto dentro do container */
     overflow: hidden; /* Garante que não haja barras de rolagem */
     padding: 0; /* Remove preenchimento */
@@ -34,9 +48,10 @@ body {
 /* Estilo do título */
 h1 {
     max-width: 90%;
+    color: #ECDFCC;
     font-size: 2rem; /* Tamanho do texto ajustado com uma unidade fixa para melhor controle */
     font-weight: bold; /* Negrito */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra do texto */
     margin-bottom: 1rem; /* Espaçamento abaixo do título */
     white-space: normal; /* Permite quebra de linha no texto */
     overflow: hidden; /* Garante que o texto não ultrapasse os limites */
@@ -55,8 +70,8 @@ h1 {
 
 /* Estilo dos botões */
 .button {
-    background-color: #ffffff; /* Cor de fundo dos botões */
-    color: #3498db; /* Cor do texto dos botões */
+    background-color: 	#697565;/* #ffffff;  Cor de fundo dos botões */
+    color: #ECDFCC;/* #3498db;  Cor do texto dos botões */
     border: none; /* Remove a borda padrão dos botões */
     border-radius: 8px; /* Bordas arredondadas */
     padding: 0.5rem 1rem; /* Ajusta o espaçamento interno dos botões */
