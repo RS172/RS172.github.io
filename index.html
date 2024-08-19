@@ -1,124 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ideal Clicker Game</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        #game-container {
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        #clicker {
-            width: 120px;
-            height: 120px;
-            background: #4CAF50;
-            color: white;
-            font-size: 24px;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: transform 0.1s;
-        }
-        #clicker:active {
-            transform: scale(0.95);
-        }
-        #upgrades {
-            margin-top: 20px;
-        }
-        .upgrade {
-            margin: 10px 0;
-            padding: 15px 20px;
-            background-color: #2196F3;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .upgrade:hover {
-            background-color: #1976D2;
-        }
-    </style>
+    <title>Centralizado</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game-container">
-        <h1>Ideal Clicker Game</h1>
-        <p>Points: <span id="points">0</span></p>
-        <button id="clicker">Click me!</button>
-        <div id="upgrades">
-            <h2>Upgrades</h2>
-            <button class="upgrade" id="upgrade1">Upgrade 1 (+1 point per click) - Cost: 10 points</button>
-            <button class="upgrade" id="upgrade2">Upgrade 2 (+2 points per click) - Cost: 50 points</button>
+    <div class="container">
+        <h1>Nervo para o músculo pectíneo</h1>
+        <div class="button-container">
+            <input type="button" value="Nervo femoral" class="button">
+            <input type="button" value="Nervo ciático" class="button">
+            <input type="button" value="Nervo obturador" class="button">
         </div>
     </div>
-
-    <script>
-        function getValidNumber(value, defaultValue) {
-            return isNaN(parseInt(value)) ? defaultValue : parseInt(value);
-        }
-
-        let points = getValidNumber(localStorage.getItem('points'), 0);
-        let pointsPerClick = getValidNumber(localStorage.getItem('pointsPerClick'), 1);
-        let upgrade1Count = getValidNumber(localStorage.getItem('upgrade1Count'), 0);
-        let upgrade2Count = getValidNumber(localStorage.getItem('upgrade2Count'), 0);
-
-        document.getElementById('points').textContent = points;
-
-        function updatePointsDisplay() {
-            document.getElementById('points').textContent = points;
-        }
-
-        function saveToLocalStorage() {
-            localStorage.setItem('points', points);
-            localStorage.setItem('pointsPerClick', pointsPerClick);
-            localStorage.setItem('upgrade1Count', upgrade1Count);
-            localStorage.setItem('upgrade2Count', upgrade2Count);
-        }
-
-        document.getElementById('clicker').addEventListener('click', function() {
-            points += pointsPerClick;
-            updatePointsDisplay();
-            saveToLocalStorage();
-        });
-
-        document.getElementById('upgrade1').addEventListener('click', function() {
-            if (points >= 10) {
-                points -= 10;
-                pointsPerClick += 1;
-                upgrade1Count += 1;
-                updatePointsDisplay();
-                saveToLocalStorage();
-            } else {
-                alert('Not enough points for Upgrade 1!');
-            }
-        });
-
-        document.getElementById('upgrade2').addEventListener('click', function() {
-            if (points >= 50) {
-                points -= 50;
-                pointsPerClick += 2;
-                upgrade2Count += 1;
-                updatePointsDisplay();
-                saveToLocalStorage();
-            } else {
-                alert('Not enough points for Upgrade 2!');
-            }
-        });
-    </script>
 </body>
 </html>
