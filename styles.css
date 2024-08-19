@@ -33,6 +33,7 @@ body {
 
 /* Estilo do título */
 h1 {
+    max-width: 90%;
     font-size: 2rem; /* Tamanho do texto ajustado com uma unidade fixa para melhor controle */
     font-weight: bold; /* Negrito */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra do texto */
